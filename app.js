@@ -5,6 +5,7 @@ var logger = require('morgan');
 var nunjucks = require('nunjucks');
 
 var indexRouter = require('./routes/index');
+var genericRouter = require('./routes/generic');
 
 var app = express();
 
@@ -20,5 +21,6 @@ nunjucks.configure('views', {
 });
 
 app.use('/', indexRouter);
+app.use('/generic', genericRouter);
 
 module.exports = app;
