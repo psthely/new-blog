@@ -1,0 +1,16 @@
+<!-- Posts -->
+    <section class="posts">
+        {% for post in posts %}
+            <article>
+                <header>
+                    <span class="date">{{ post.date }}</span>
+                    <h2><a href="{{ post.href }}">{{ post.title }}</a></h2>
+                </header>
+                <a href="{{ post.href }}" class="image fit"><img src="{{ post.image.src }}" alt="{{ post.image.alt }}" /></a>
+                <p>{{ post.description }}</p>
+                <ul class="actions special">
+                    <li><a href="{{ post.href }}" class="button">Full Story</a></li>
+                </ul>
+            </article>
+        {% endfor %}
+    </section>
