@@ -51,8 +51,7 @@ router.get('/', function(req, res) {
     'index.njk', {
       title: 'Massively by HTML5 UP',
       posts: posts
-    }
-  );
+  });
 });
 
 module.exports = router;

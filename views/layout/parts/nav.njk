@@ -1,9 +1,9 @@
 <!-- Nav -->
 	<nav id="nav">
 		<ul class="links">
-			<li class="active"><a href="/">This is Massively</a></li>
-			<li><a href="/generic">Generic Page</a></li>
-			<li><a href="elements.html">Elements Reference</a></li>
+			<li id="home"><a href="/">This is Massively</a></li>
+			<li id="generic"><a href="/generic">Generic Page</a></li>
+			<li id="elements"><a href="/elements">Elements Reference</a></li>
 		</ul>
 		<ul class="icons">
 			<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -12,3 +12,16 @@
 			<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 		</ul>
 	</nav>
+	<script>
+		switch(window.location.pathname) {
+			case '/':
+				document.getElementById('home').setAttribute('class', 'active');
+				break;
+			case '/generic':
+				document.getElementById('generic').setAttribute('class', 'active');
+				break;
+			case '/elements':
+				document.getElementById('elements').setAttribute('class', 'active');
+				break;
+		}
+	</script>
