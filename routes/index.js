@@ -3,6 +3,13 @@ var router = express.Router();
 
 var posts = [
   {
+    date: '07 Juillet 2020',
+    title: 'HTML et CSS',
+    href: 'html-css',
+    image: { src: 'images/pic02.jpg', alt: '' },
+    description: 'Ce cours pour débutant traite de l\'utilisation des langages HTML et CSS'
+  },
+  {
     date: 'April 24, 2017',
     title: 'Sed magna ipsum faucibus',
     href: 'generic',
@@ -49,6 +56,9 @@ var posts = [
 router.get('/', function(req, res) {
   res.render(
     'index.njk', {
+      introTitle: 'Welcome to my Blog',
+      introDescription: 'Another developer\'s Blog about Web Dev<br/>Check <a href="https://philippesthely.netlify.app" target="_blank">my ancient Blog</a>',
+      headerTitle: 'PSthely - Web Dev',
       title: 'Massively by HTML5 UP',
       posts: posts
   });

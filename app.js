@@ -7,6 +7,7 @@ var nunjucks = require('nunjucks');
 var indexRouter = require('./routes/index');
 var genericRouter = require('./routes/generic');
 var elementsRouter = require('./routes/elements');
+var htmlCssRouter = require('./routes/htmlCss.js');
 
 var app = express();
 
@@ -24,5 +25,6 @@ nunjucks.configure('views', {
 app.use('/', indexRouter);
 app.use('/generic', genericRouter);
 app.use('/elements', elementsRouter);
+app.use('/html-css', htmlCssRouter);
 
 module.exports = app;
